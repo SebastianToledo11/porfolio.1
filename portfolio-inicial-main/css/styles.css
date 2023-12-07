@@ -170,6 +170,13 @@ body.dark{
     padding: 1em 0;
 }
 
+.skills__header{
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    margin-left: auto;
+}
+
 .skills__tech{
     margin: 1%;
     font-size: 0.8rem;
