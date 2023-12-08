@@ -137,7 +137,7 @@ body.dark{
 }
 
 .card__image-container{
-    min-width: 220px;
+    min-width: 320px;
     border-radius: var(--border-radius);
     overflow: hidden;
 }
