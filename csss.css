@@ -4,7 +4,7 @@
     --bg-color: hsl(0, 0%, 90%);
     --bg-card-color: hsl(0, 0%, 98%);
     --border-radius:0.4em;
-    --transition:color 0.1s, background-color 0.2s ease-in-out;
+    --transition:color 2s, background-color 0.2s ease-in-out;
     --skills-bar-length: 0%;
 }
 
@@ -24,10 +24,12 @@ img{
 
 body{
     margin: 0;
+    height: 100%;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: var(--transition);
     font-family: sans-serif;
+    
 }
 
 body.dark{
@@ -44,6 +46,25 @@ body.dark{
     padding: 0 1.5em;
     background-color: var(--bg-card-color);
     transition: var(--transition);
+}
+
+
+.present__total{
+    display: grid;
+    padding: 2em;
+    gap: 0.5em;
+}
+
+.present{
+    width: 100%;
+    text-align: center;
+    margin: 0%;
+}
+
+.present__img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .switches{
@@ -127,6 +148,7 @@ body.dark{
     .column--right{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, min-content);
+        align-items: start;
     }
 }
 
@@ -147,8 +169,7 @@ body.dark{
 }
 
 .card__title{
-    margin: 0%;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-size: 1.2rem;
 }
 
@@ -165,6 +186,14 @@ body.dark{
 .card__text{
     font-size: 0.9rem;
     line-height: 1.5;
+}
+
+@media screen and (min-width: 760px){
+    .card--project{
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column: 1 / -1;
+    }   
 }
 
 .skills{
@@ -271,8 +300,36 @@ body.dark{
 
 }
 
+@media screen and (min-width: 760px){
+    .project{
+        margin-left: 2em;
+    }
+}
+
+.project__tags{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0;
+    font-size: 0.6rem;
+    width: 275px;
+}
+
+@media screen and (min-width: 760px){
+    .project__tags{
+        width: 325px;
+        font-size: 0.8rem;
+    }
+}
+
+.project__tag{
+    padding: 0.4em 0.8em;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
 .icon{
-    margin-right: 1em;
+    margin-right: 0.5em;
 }
 
 .no-margin{
