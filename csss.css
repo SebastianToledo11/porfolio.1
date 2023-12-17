@@ -8,6 +8,11 @@
     --skills-bar-length: 0%;
 }
 
+html{
+    margin: 0;
+    height: 100%;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -29,7 +34,7 @@ body{
     color: var(--text-color);
     transition: var(--transition);
     font-family: sans-serif;
-    
+    flex-wrap: wrap;
 }
 
 body.dark{
