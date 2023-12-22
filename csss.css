@@ -58,7 +58,7 @@ body.dark{
 
 .menu--ul {
     list-style-type: none;
-    display: flex;
+    display: none;
     gap: 1rem;
 }
 
@@ -68,16 +68,24 @@ body.dark{
 }
 
 .open__menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 3em;
+}
+.close--menu{
     display: none;
 }
 
 @media screen and (max-width: 550px){
-    /*.open__menu{
+    .open__menu{
         display: block;
     }
     .menu{
-        display: none;
-    }*/
+        opacity: 0;
+        visibility: hidden;
+    }
     .menu{
         display: flex;
         flex-direction: column;
@@ -87,11 +95,14 @@ body.dark{
         right: 0;
         bottom: 0;
         background-color: var(--bg-color);
-        padding: 3em 2em;
+        padding: 1em 2em;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
     .close--menu{
-        
+        display: block;
+        margin: 1em 2em 4em 2em;
+        background-color: var(--bg-color);
+        border-radius: var(--border-radius);
     }
     .menu--ul{
         flex-direction: column;
